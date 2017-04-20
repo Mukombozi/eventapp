@@ -1,0 +1,18 @@
+<div>
+	'Trouver un evenement : <input ng-model="$ctrl.query" />
+</div>
+<div>
+   <ul>
+		<li ng-repeat="event in $ctrl.events | filter:$ctrl.query">
+			<span>{{event.eventTitle}}</span>
+			&nbsp; &nbsp;
+			<span>{{event.eventPlace}}</span>
+			&nbsp; &nbsp;
+			<span>{{event.eventDate}}</span> 
+			&nbsp; &nbsp;
+			<a href="#/events/{{event.eventId}}" >Details</a>	
+			<br>
+		</li>
+	</ul>
+</div>
+
